@@ -434,3 +434,8 @@ variable "openid_connect_audiences" {
   default     = []
 }
 
+variable "asg_lifecycle_ignore_list" {
+  description = "List of properties to ignore for workers and worker_aunch_templates. e.g. [load_balancers, target_group_arns] are useful when creation of those is done outside of the module."
+  type        = list(string)
+  default     = []
+}
